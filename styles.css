@@ -15,6 +15,7 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+
 .animated-box {
     width: 100px;
     height: 100px;
@@ -36,6 +37,7 @@
         background: #c0392b;
     }
 }
+
 
 .pulse-element {
     width: 80px;
@@ -144,6 +146,7 @@
 .card.flipped {
     transform: rotateY(180deg);
 }
+
 
 .loader {
     text-align: center;
