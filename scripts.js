@@ -1,12 +1,10 @@
 let animationCounter = 0;
 
-// Function with parameters and return value
 function calculateAnimationDuration(baseDuration, multiplier = 1) {
-    
+
     const calculatedDuration = baseDuration * multiplier;
     return calculatedDuration;
 }
-
 
 function updateAnimationCounter() {
    
@@ -32,10 +30,10 @@ function animateElement(element, animationClass, duration = 500) {
         return false;
     }
     
- 
+  
     element.classList.add(animationClass);
     
- 
+   
     if (!animationClass.includes('flipped') && !animationClass.includes('hidden')) {
         setTimeout(() => {
             element.classList.remove(animationClass);
@@ -46,10 +44,8 @@ function animateElement(element, animationClass, duration = 500) {
 }
 
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Get references to DOM elements
+   
     const triggerBtn = document.getElementById('triggerAnimation');
     const flipCardBtn = document.getElementById('flipCard');
     const toggleLoaderBtn = document.getElementById('toggleLoader');
@@ -57,13 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const flipCardElement = document.getElementById('flipCardElement');
     const loader = document.getElementById('loader');
     
-    
+   
     const animationDuration = calculateAnimationDuration(1000, 2);
     console.log('Calculated animation duration:', animationDuration);
     
-   
+ 
     triggerBtn.addEventListener('click', function() {
-        // Using our reusable function
+     
         const animationClass = getAnimationType('click');
         const success = animateElement(animatedBox, animationClass, 1500);
         
@@ -73,23 +69,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    
     flipCardBtn.addEventListener('click', function() {
-        // Toggle flip class directly
+    
         flipCardElement.classList.toggle('flipped');
         
-        // Demonstrate local scope within event handler
+       
         const isFlipped = flipCardElement.classList.contains('flipped');
         console.log('Card is flipped:', isFlipped);
-    })
+    });
+    
+   
     toggleLoaderBtn.addEventListener('click', function() {
-        // Toggle visibility and animation
+      
         loader.classList.toggle('hidden');
         
         const isVisible = !loader.classList.contains('hidden');
         console.log('Loader visible:', isVisible);
         
-
+  
         const loaderAnimationType = getAnimationType('toggle');
         console.log('Loader animation type would be:', loaderAnimationType);
     });
@@ -103,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function createAnimationLogger(animationName) {
-    
+   
     let executionCount = 0;
     
     return function() {
@@ -112,5 +109,6 @@ function createAnimationLogger(animationName) {
         return executionCount;
     };
 }
+
 
 const bounceLogger = createAnimationLogger('Bounce Animation');
