@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations & JavaScript Functions</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Animations + JavaScript Functions</h1>
+    </header>
+
+    <main>
+        <!--  CSS Transitions & Animations -->
+        <section id="part1">
+            <h2>Part 1: CSS3 Transitions & Animations</h2>
+            
+            <div class="demo-container">
+                <button class="transition-btn">Hover Me (Transition)</button>
+                
+                <div class="animated-box">Keyframe Animation</div>
+                
+                <div class="pulse-element">Pulse Effect</div>
+            </div>
+        </section>
+
+        <!--  Combined CSS & JavaScript -->
+        <section id="part3">
+            <h2>Part 3: Combined CSS Animations + JavaScript</h2>
+            
+            <div class="demo-container">
+                <button id="triggerAnimation" class="action-btn">Trigger Box Animation</button>
+                <button id="flipCard" class="action-btn">Flip Card</button>
+                <button id="toggleLoader" class="action-btn">Toggle Loader</button>
+                
+                <div id="animatedBox" class="target-box">Animate Me!</div>
+                
+                <div class="card-container">
+                    <div id="flipCardElement" class="card">
+                        <div class="card-front">Front</div>
+                        <div class="card-back">Back Content</div>
+                    </div>
+                </div>
+                
+                <div id="loader" class="loader hidden">
+                    <div class="spinner"></div>
+                    <p>Loading...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
